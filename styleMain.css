@@ -1,0 +1,360 @@
+@keyframes borderAnimation {
+    0% {
+        transform: translateX(-90%);
+    }
+
+    100% {
+        transform: translateX(80%);
+    }
+}
+
+
+a {
+    text-decoration: none;
+}
+
+body {
+    margin: 0;
+    background-color: #4C0070;
+}
+
+form div {
+    color: #E4F1FF;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    padding: 2px;
+    text-shadow: 1px 1px 1px #051029;
+}
+
+form label {
+    margin-left: 60px;
+}
+
+
+input {
+    display: flex;
+    font-style: oblique;
+    color: white;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    height: 30px;
+    background-color: #18122B;
+    opacity: 0.7;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    position: relative;
+}
+
+
+form input:hover {
+    color: #E4F1FF;
+    opacity: 3;
+}
+
+form select {
+    color: white;
+    opacity: 2;
+}
+
+.navMenu {
+    display: flex;
+    height: 60px;
+    background-color: #051029;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.navMenu::after,
+.navMenu::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    background: conic-gradient(#E4F1FF, #9C19E0, #E4F1FF);
+    background-size: 300% 40%;
+    z-index: -1;
+    animation: borderAnimation 5s alternate infinite;
+}
+
+.navMenu::before {
+    filter: blur(1.5rem);
+    position: absolute;
+    opacity: 0.5;
+    z-index: -2;
+}
+
+.kiwiSvg {
+    width: 60px;
+    height: 60px;
+}
+
+#shape0 {
+    fill: #18122B;
+}
+
+/*olhoDireito*/
+#shape1 {
+    fill: #E4F1FF;
+}
+
+/*olhoEsquerdo*/
+#shape2 {
+    fill: #E4F1FF;
+}
+
+#shape3 {
+    fill: #18122B;
+}
+
+/*Bico*/
+#shape4 {
+    fill: #18122B;
+    stroke: none;
+}
+
+#shape5 {
+    fill: #E4F1FF;
+    stroke: #393053;
+    stroke-width: 4px;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style: none;
+}
+
+.liRegister,
+.liLogin {
+    padding: 5px;
+    color: #E4F1FF;
+    font-size: 20px;
+    font-family: Open Sans, sans-serif;
+}
+
+.liLogin {
+    font-weight: bold;
+}
+
+.liRegister {
+    display: flex;
+    background-color: #22177A;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.itensMenu {
+    display: flex;
+    margin-left: auto;
+    padding: 5px;
+}
+
+.mainTitle {
+    display: flex;
+}
+
+.mainContainer {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.leftContainer,
+.rightContainer {
+    width: 50%;
+    height: 100vh;
+    transition: 0.3s;
+    transition-timing-function: linear;
+}
+
+.leftContainer {
+    display: flex;
+    filter: saturate(1);
+    background-color: #160040;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+}
+
+.leftContainer:hover {
+    width: 55%;
+    filter: saturate(1);
+}
+
+.rightContainer:hover {
+    width: 55%;
+    filter: saturate(1.5);
+}
+
+
+.leftFormContainer {
+    display: flex;
+    margin: 0 auto;
+    padding: 2em;
+    background-image: url(purpleSpacePretoEbranco.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 80%;
+    width: 350px;
+    height: 400px;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.leftContainer:hover .leftFormContainer {
+    background-image: url(purpleSpaceColor.jpg);
+}
+
+.rightContainer:hover .rightFormContainer{
+    background-image: url("space2Colorido.jpg");
+}
+
+.leftFormContainer::after,
+.leftFormContainer::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    background-color:#9C19E0;
+    left: 50%;
+    border-radius: 10px;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+}
+
+.leftFormContainer::before {
+    filter: blur(2rem);
+    opacity: 1;
+}
+
+.cadRegister {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    transform: scale(1.7);
+    font-weight: 900;
+}
+
+#leftForm {
+    height: 300px;
+    width: 320px;
+    background-color: hsla(0, 0%, 10%, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(1.5px);
+    position: absolute;
+}
+
+.nameAndGenre {
+    display: flex;
+}
+
+.genreLabel{
+    margin-left: -37px;
+}
+
+#genre {
+    margin-left: 20px;
+    text-align: center;
+    justify-content: center;
+    transform: translate(-13%);
+}
+
+.genreSelect select {
+    background-color: #18122B;
+    opacity: 0.5;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.genreSelect select option {
+    color: wheat;
+    background-color: #2A004E;
+    cursor: pointer;
+}
+
+.buttonDiv {
+    text-align: center;
+}
+
+.button {
+    text-align: center;
+    border-radius: 30em;
+    width: 70px;
+    border: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    background-color: #2A004E;
+    opacity: 0.5;
+    color: #E4F1FF;
+    cursor: pointer;
+}
+
+.leftContainer:hover .button {
+    opacity: 1;
+}
+
+
+.rightContainer {
+    display: flex;
+    filter: saturate(1);
+    background-color: #070A52;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+}
+
+.rightFormContainer {
+    display: flex;
+    margin: 0 auto;
+    padding: 2em;
+    background-image: url(space2PretoEbranco.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 80%;
+    width: 350px;
+    height: 400px;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    position: relative;
+    transition: background-image 0.5s ease-in-out;
+}
+
+.rightFormContainer::after,
+.rightFormContainer::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    background-color: #0079FF;
+    left: 50%;
+    border-radius: 10px;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+}
+
+.rightFormContainer::before {
+    filter: blur(2rem);
+    opacity: 1;
+}
